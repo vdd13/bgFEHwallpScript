@@ -15,6 +15,7 @@ SIZE=$(echo $(ls -l Downloads/*.jpg | wc -l))
 #pick up random number from 1 to SIZE
 RAND=$(shuf -i 1-$SIZE -n 1)
 #echo $RAND
+#######################################
 
 #pick up .jpg file name based on RAND number
 IMAGE=$( ls Downloads/*.jpg | sed "${RAND}q;d" )
